@@ -1,0 +1,2 @@
+#### Medical Assistant 
+> A clinic management system for coordinating patients, doctors, receptionists, lab staff, and administrators. The application must support appointment scheduling, electronic medical records, prescriptions, lab orders, invoices, and follow-up workflows.
