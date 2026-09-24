@@ -1,0 +1,8 @@
+{
+  "watch": ["src"],
+  "ext": "js,json",
+  "ignore": ["src/scripts", "node_modules", ".env", "dist"],
+  "exec": "node src/server.js",
+  "delay": 300,
+  "restartable": "rs"
+}
