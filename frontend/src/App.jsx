@@ -13,6 +13,7 @@ import AppShell from './components/AppShell.jsx';
 import { RequireAuth, RequireRole } from './components/RequireAuth.jsx';
 import { ROLES, useAuthStore } from './store/authStore.js';
 
+import LandingPage from './pages/LandingPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
@@ -99,8 +100,8 @@ export default function App() {
             />
           </Route>
 
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

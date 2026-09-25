@@ -17,59 +17,68 @@ body {
 }
 
 @layer components {
-  /* Outlined buttons — text label + border only. Monochrome aesthetic. */
+  /* Unified Clinical Design System — Solid colors, high contrast, zero gradients */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm font-medium leading-none transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-medium leading-none transition-all disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer;
   }
   .btn-primary {
-    @apply border-ink-800 bg-ink-800 text-ink-50 hover:bg-ink-700 hover:border-ink-700;
+    @apply border-brand-700 bg-brand-700 text-white hover:bg-brand-800 hover:border-brand-800 shadow-subtle active:translate-y-px;
   }
   .btn-outline {
-    @apply border-ink-300 bg-white text-ink-700 hover:border-ink-700 hover:text-ink-900;
+    @apply border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-400 hover:text-slate-900 shadow-subtle;
   }
   .btn-ghost {
-    @apply border-transparent bg-transparent text-ink-700 hover:bg-ink-100;
+    @apply border-transparent bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900;
   }
   .btn-danger {
-    @apply border-ink-900 bg-white text-ink-900 hover:bg-ink-900 hover:text-ink-50;
+    @apply border-rose-600 bg-rose-600 text-white hover:bg-rose-700 hover:border-rose-700 shadow-subtle;
   }
   .btn-sm {
-    @apply px-2 py-1 text-xs;
+    @apply px-2.5 py-1.5 text-xs;
+  }
+  .btn-lg {
+    @apply px-5 py-2.5 text-base font-semibold;
   }
 
   .input {
-    @apply w-full rounded-md border border-ink-200 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-300 focus:border-ink-700 focus:outline-none focus:ring-1 focus:ring-ink-700 disabled:bg-ink-50;
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-700/20 disabled:bg-slate-100 transition-colors;
   }
   .label {
-    @apply mb-1 block text-xs font-medium uppercase tracking-wide text-ink-500;
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-slate-500;
   }
   .card {
-    @apply rounded-lg border border-ink-200 bg-white;
+    @apply rounded-xl border border-slate-200 bg-white shadow-card;
   }
   .card-pad {
-    @apply p-5;
+    @apply p-6;
   }
   .h-display {
-    @apply font-display;
+    @apply font-display tracking-tight text-slate-900;
   }
   .pill {
-    @apply inline-flex items-center gap-1 rounded-full border border-ink-300 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-ink-600;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-slate-700;
   }
   .table-clean {
     @apply w-full text-left text-sm;
   }
   .table-clean th {
-    @apply border-b border-ink-200 px-3 py-2 text-xs font-medium uppercase tracking-wide text-ink-500;
+    @apply border-b border-slate-200 bg-slate-50/80 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-slate-600;
   }
   .table-clean td {
-    @apply border-b border-ink-100 px-3 py-2 align-top text-ink-800;
+    @apply border-b border-slate-100 px-4 py-3.5 align-middle text-slate-700;
   }
   .nav-link {
-    @apply flex items-center gap-2 rounded-md px-3 py-2 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900;
+    @apply flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors;
   }
   .nav-link-active {
-    @apply bg-ink-800 text-ink-50 hover:bg-ink-800 hover:text-ink-50;
+    @apply bg-brand-700 text-white hover:bg-brand-700 hover:text-white shadow-subtle;
   }
+}
+
+/* Slideshow progress timer */
+@keyframes progress {
+  from { width: 0%; }
+  to { width: 100%; }
 }
 
 /* Print: hide chrome */
