@@ -12,7 +12,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const DEMO_PERSONAS = [
   { role: 'admin', label: 'Clinic Admin', name: 'Ada Admin', email: 'ada.admin+admin@medassist.dev', desc: 'Full system control, users & audit logs' },
-  { role: 'doctor', label: 'Doctor', name: 'Dr. Aryan Mehta', email: 'dr..aryan.mehta+doctor@medassist.dev', desc: 'EHR, clinical notes & prescriptions' },
+  { role: 'doctor', label: 'Doctor', name: 'Dr. Aryan Mehta', email: 'dr.aryan.mehta+doctor@medassist.dev', desc: 'EHR, clinical notes & prescriptions' },
   { role: 'receptionist', label: 'Receptionist', name: 'Riya Reception', email: 'riya.reception+receptionist@medassist.dev', desc: 'Patient check-in, queue & billing' },
   { role: 'lab', label: 'Lab Technician', name: 'Lab Lavanya', email: 'lab.lavanya+lab@medassist.dev', desc: 'Sample tracking & diagnostic reports' },
   { role: 'patient', label: 'Patient', name: 'Aarav Sharma', email: 'aarav.sharma+patient@medassist.dev', desc: 'Personal timeline, appointments & Rx' },

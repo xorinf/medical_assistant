@@ -38,7 +38,16 @@ async function clear() {
 }
 
 async function makeUser(role, name, password = 'password123') {
-  const email = `${name.toLowerCase().replace(/[^a-z]/g, '.')}+${role}@medassist.dev`;
+  // Ponytail: split on whitespace, drop empty tokens, collapse to single dots.
+  //   "Dr. Aryan Mehta" → "dr.aryan.mehta"
+  const slug = name
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((p) => p.replace(/[^a-z]/g, ''))
+    .filter(Boolean)
+    .join('.');
+  const email = `${slug}+${role}@medassist.dev`;
   const hash = await User.hashPassword(password);
   return User.create({ email, passwordHash: hash, name, role });
 }

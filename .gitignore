@@ -33,3 +33,4 @@ logs/
 
 # Local Mongo data dirs
 .mongo-data/
+.vercel
